@@ -26,3 +26,4 @@ def merge(arr1,arr2):
 
 arr = merge_sort([3,-2,-1,0,2,4,1])
 [print(s) for s in arr]
+
