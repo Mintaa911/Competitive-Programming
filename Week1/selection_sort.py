@@ -1,12 +1,17 @@
-def selection_sort(arr):
-    arr2 = []
-    while len(arr) != 0:
-        min_indx = 0
-        min = arr[min_indx]
-        for i in range(1,len(arr)):
-            if arr[i] < min:
-                min = arr[i]
-                min_indx = i
-        arr2.append(min)
-        arr.pop(min_indx)
-    return arr2
+def select(arr, i):
+        # code here 
+        minimum = arr[i]
+        for j in range(i,len(arr)):
+            if arr[j] < minimum:
+                minimum = arr[j]
+        return minimum
+        
+def selectionSort(arr,n):
+    #code here
+    for j in range(n):
+        minimum = select(arr,j)
+        idx = arr[j:].index(minimum)
+        arr[j],arr[j+idx] = arr[j+idx],arr[j]
+
+    return arr
+
