@@ -1,4 +1,4 @@
-def isValid(str):
+def isValid(s):
     stack = []
     dictBrackets = {"{":"}","[":"]","(":")"}
     for bracket in s:
