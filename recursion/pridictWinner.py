@@ -1,5 +1,5 @@
 class Solution:
-    def PredictTheWinner(self, nums: List[int]) -> bool:
+    def PredictTheWinner(self,nums):
         p1,p2 = self.divideConquer(nums,0,len(nums)-1,1)
         
         return p1 >= p2
