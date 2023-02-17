@@ -1,0 +1,17 @@
+class Solution:
+    def generateParenthesis(self, n: int) -> List[str]:
+        ans = []
+        def dp(o,c,s):
+            if o < 0: return
+            if c == 0:
+                ans.append("".join(s))
+                return
+            if c > o:
+                dp(o-1,c,s+['('])
+                dp(o,c-1,s+[')'])
+            else:
+                dp(o-1,c,s+['('])
+                
+            return
+        dp(n,n,[])
+        return ans
